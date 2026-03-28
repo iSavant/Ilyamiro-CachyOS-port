@@ -1,0 +1,23 @@
+[config]
+# Matugen strictly requires this block to exist at the top.
+reload_apps = false
+
+[templates.quickshell]
+input_path = "~/.config/hypr/scripts/quickshell/colors.json.template"
+output_path = "/tmp/qs_colors.json"
+
+[templates.kitty]
+input_path = "~/.config/matugen/templates/kitty-colors.conf.template"
+output_path = "/tmp/kitty-matugen-colors.conf"
+
+[templates.discord]
+input_path = "~/.config/matugen/templates/discord.css.template"
+output_path = "~/.config/vesktop/themes/matugen.theme.css"
+
+[templates.web_github]
+input_path = "~/.config/matugen/templates/websites/github.css.template"
+output_path = "~/.mozilla/firefox/zawmoi9h.default/chrome/matugen-github.css"
+
+[templates.web_youtube]
+input_path = "~/.config/matugen/templates/websites/youtube.css.template"
+output_path = "~/.mozilla/firefox/zawmoi9h.default/chrome/matugen-youtube.css"

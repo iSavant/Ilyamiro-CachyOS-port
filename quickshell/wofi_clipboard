@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+# ─────────────────────────────────────────────
+# clipboard.sh
+# Clipboard history picker using cliphist + wofi
+# Toggle — if wofi is already open, close it
+# ─────────────────────────────────────────────
+
+if pgrep -x "wofi" > /dev/null; then
+    pkill wofi
+else
+    cliphist list | wofi --show dmenu \
+        --prompt "Clipboard" \
+        --insensitive \
+        | cliphist decode | wl-copy
+fi
